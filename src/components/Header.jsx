@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import { MdArrowOutward } from "react-icons/md";
 
@@ -8,7 +9,12 @@ const Header = () => {
         WE CREATE
       </h1>
       <div className="flex items-center">
-        <div className="image w-[150px] mr-2 h-[80px] mt-2 bg-orange-600 rounded-md py-6"></div>
+        <motion.div
+          initial={{ width: 0 }}
+          animate={{ width: "150px" }}
+          transition={{ ease: [0.76, 0, 0.24, 1], duration: 1 }}
+          className="image w-[150px] mr-2 h-[80px] mt-2 bg-orange-600 rounded-md py-6"
+        ></motion.div>
         <h1 className="text-8xl font-bold font-oswald text-teal-500 drop-shadow-lg">
           EYE-OPENING
         </h1>
